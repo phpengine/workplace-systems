@@ -70,7 +70,6 @@ class AutoPilotConfigured extends AutoPilot {
     ProxyPreserveHost On
     ProxyPass / http://127.0.0.1:8080/
     ProxyPassReverse / http://127.0.0.1:8080/
-    ServerName hostname.example.com
 </VirtualHost>
 
 TEMPLATE;
