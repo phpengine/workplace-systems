@@ -28,6 +28,9 @@ class AutoPilotConfigured extends AutoPilot {
                 array ( "Logging" => array( "log" => array( "log-message" => "Lets ensure Phlagrant" ),),),
                 array ( "Phlagrant" => array( "ensure" => array(),),),
 
+                array ( "Logging" => array( "log" => array( "log-message" => "Lets ensure Virtualbox and Guest Additions" ),),),
+                array ( "Virtualbox" => array( "ensure" => array("with-guest-additions"),),),
+
                 array ( "Logging" => array( "log" => array(
                     "log-message" => "Capgemini workstation setup done"
                 ),),),
