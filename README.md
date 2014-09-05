@@ -23,7 +23,7 @@ Prerequisites: You'll need to be running Ubuntu between 12 and 14 on your machin
 
 1) Do this...
 
-bash <(wget -qO- http://github.com/phpengine/workplace-systems/raw/master/capgemini-install.sh)
+bash <(wget -qO- http://github.com/phpengine/workplace-systems/raw/master/workplace-systems-install.sh)
 
 Which will install Git and PHP5 if you don't already have them, Install Cleopatra Config Management, Clone this repo,
 change directory into it, use a Cleopatra autopilot file to install Dapperstrano, Phlagrant and Virtualbox,
@@ -32,15 +32,15 @@ box, run config management and install PHP, Apache, Selenium, Behat, PHPUnit, Je
 already configured to execute the tests, Virtual Hosts, Host Names. Everything will work out of the box after this. All
 a Managed, Reproducible, Infrastucture by (PHP) code Configuration.
 
-2) # That might take a while... 30 minutes on my BT infinity, about 2GB of software downloadss
-   # ... but now you can browse the website as a bonus, sthis will also provision your host (hostname) for a nice URL)
+2) That might take a while... 30 minutes on my BT infinity, about 2GB of software downloads
+   ... but now you can browse the website as a bonus, sthis will also provision your host (hostname) for a nice URL)
    http://www.workplace-systems.vm
 
-6) # And also browse a jenkins build, where you'll see executable tests in PHPUnit, Behat and Selenium. Hit Build Now
+3) And also browse a jenkins build, where you'll see executable tests in PHPUnit, Behat and Selenium. Hit Build Now
    to have them executed. The associated software, Behat, Selenium and PHPUnit will be set up and working.
    http://www.wsys-jenkins.vm
 
-7) When you're done gracefully close the VM with
+4) When you're done gracefully close the VM with
    phlagrant halt now --fail-hard
    phlagrant destroy now
    to make sure the provisioning on your host machine is undone.
