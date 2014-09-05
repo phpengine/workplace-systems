@@ -1,3 +1,4 @@
+=========
 ## workplace-systems
 ============
 
@@ -43,11 +44,3 @@ a Managed, Reproducible, Infrastucture by (PHP) code Configuration.
    phlagrant halt now --fail-hard
    phlagrant destroy now
    to make sure the provisioning on your host machine is undone.
-
-# Login Instructions
--------------
-
-There a single admin user included, which is -
-
-User: ishouldhiredave
-Pass: rightnow
