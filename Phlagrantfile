@@ -1,0 +1,80 @@
+<?php
+
+Namespace Model ;
+
+class Phlagrantfile extends PhlagrantfileBase {
+
+    public $config ;
+
+    public function __construct() {
+        $this->setConfig();
+    }
+
+    private function setConfig() {
+        $this->setDefaultConfig();
+        // Selenium tests wont work without a GUI
+        $this->config["vm"]["gui_mode"] = "gui" ;
+        $this->config["vm"]["box"] = "vanillaubuntu1204amd64" ;
+        # Shared folder - This should map to the workstation environment vhost path parent...
+        $this->config["vm"]["shared_folders"][] =
+            array(
+                "name" => "host_web_path",
+                "host_path" => getcwd()."/",
+            ) ;
+        # Provisioning
+        $this->config["vm"]["provision"][] =
+            array(
+                "provisioner" => "Shell",
+                "tool" => "shell",
+                "target" => "guest",
+                "default" => "MountShares"
+            ) ;
+        $this->config["vm"]["provision"][] =
+            array(
+                "provisioner" => "Shell",
+                "tool" => "shell",
+                "target" => "guest",
+                "default" => "CleopatraInit"
+            ) ;
+        $this->config["vm"]["provision"][] =
+            array(
+                "provisioner" => "PharaohTools",
+                "tool" => "cleopatra",
+                "target" => "guest",
+                "script" => getcwd()."/build/config/cleopatra/cleofy/autopilots/generic/Phlagrant/cleofy-cm-phlagrant-box.php"
+            ) ;
+        $this->config["vm"]["provision"][] =
+            array(
+                "provisioner" => "PharaohTools",
+                "tool" => "dapperstrano",
+                "target" => "host",
+                "script" => getcwd()."/build/config/dapperstrano/dapperfy/autopilots/custom/phlagrant-host-phlagrant-host-install-host-file-entry.php"
+            ) ;
+        $this->config["vm"]["provision"][] =
+            array(
+                "provisioner" => "PharaohTools",
+                "tool" => "dapperstrano",
+                "target" => "guest",
+                "script" => getcwd()."/build/config/dapperstrano/dapperfy/autopilots/generated/phlagrant-box-phlagrant-install-code-no-dbconf.php"
+            ) ;
+        $this->config["vm"]["provision"][] =
+            array(
+                "provisioner" => "PharaohTools",
+                "tool" => "dapperstrano",
+                "target" => "guest",
+                "script" => getcwd()."/build/config/dapperstrano/dapperfy/autopilots/custom/phlagrant-box-jenkins-vhost.php"
+            ) ;
+        $this->config["vm"]["provision_destroy_post"][] =
+            array(
+                "provisioner" => "PharaohTools",
+                "tool" => "dapperstrano",
+                "target" => "host",
+                "script" => getcwd()."/build/config/dapperstrano/dapperfy/autopilots/custom/phlagrant-host-phlagrant-host-uninstall-host-file-entry.php"
+            ) ;
+        $this->config["vm"]["post_up_message"] = "Hi Workplace systems! - Your Phlagrant Box has been brought up successfully (I hope :) )".
+            "This guest was configured to be " .
+            "provisioned by both Cleopatra and Dapperstrano, and the host also by Dapperstrano. Your application " .
+            "should now be accessible by browser - go to www.workplace-systems.vm or go to www.wsys-jenkins.vm to run some tests.";
+    }
+
+}
