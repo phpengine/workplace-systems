@@ -34,7 +34,7 @@ class AutoPilotConfigured extends AutoPilot {
                     "guess" => true,
                     "vhe-docroot" => "/var/www/workplace-systems/",
                     "vhe-url" => "www.workplace-systems.vm",
-                    "vhe-ip-port" => "<%tpl.php%>dap_apache_vhost_ip</%tpl.php%>",
+                    "vhe-ip-port" => $this->getCurrentTargetFromPapyrusLocal(),
                     "vhe-vhost-dir" => "/etc/apache2/sites-available",
                     "vhe-template" => $this->getTemplate(),
                 ), ), ),
@@ -66,31 +66,17 @@ class AutoPilotConfigured extends AutoPilot {
    CustomLog /var/log/apache2/access.log combined
  </VirtualHost>
 
-#
-# need to do something snakeoilyish before this will work
-#
-# NameVirtualHost 0.0.0.0:443
-# <VirtualHost 0.0.0.0:443>
-# 	 ServerAdmin webmaster@localhost
-# 	 ServerName ****SERVER NAME****
- 	 DocumentRoot ****WEB ROOT****src
-   # SSLEngine on
-   # SSLCertificateFile /etc/apache2/ssl/ssl.crt
-   # SSLCertificateKeyFile /etc/apache2/ssl/ssl.key
-   # SSLCertificateChainFile /etc/apache2/ssl/bundle.crt
-# 	 <Directory ****WEB ROOT****src>
- #		 Options Indexes FollowSymLinks MultiViews
-#		AllowOverride All
-#		Order allow,deny
-#		allow from all
-#	</Directory>
-#  ErrorLog /var/log/apache2/error.log
-#  CustomLog /var/log/apache2/access.log combined
-#  </VirtualHost>
 TEMPLATE;
 
         return $template ;
     }
 
+    protected function getCurrentTargetFromPapyrusLocal() {
+        $plf = file_get_contents("/var/www/workplace-systems/papyrusfilelocal") ;
+        $pfu = unserialize($plf) ;
+        if (is_array($pfu) && count($pfu)>0) {
+            return $pfu["phlagrant-box"]["target"] ; }
+        return null ;
+    }
 
 }
