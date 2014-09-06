@@ -14,6 +14,10 @@ Testing Skills.
 In a real world situation there would be far more complex test plans, scalability, managed infrastructure, multiple types
 of automated testing, test patterns, continuous integration, multiple and prototypable environments and the like.
 
+This will soon work on any OS, as its just Phlagrant that needs some windows compatible models. I think it will work
+fine on a Mac, but haven't tried yet.
+
+
 
 # Install Instructions:
 ------------
