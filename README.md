@@ -48,3 +48,7 @@ a Managed, Reproducible, Infrastucture by (PHP) code Configuration.
    phlagrant halt now --fail-hard
    phlagrant destroy now
    to make sure the provisioning on your host machine is undone.
+
+5) Bring the box back up with
+   phlagrant up now --modify --provision
+   if needed
