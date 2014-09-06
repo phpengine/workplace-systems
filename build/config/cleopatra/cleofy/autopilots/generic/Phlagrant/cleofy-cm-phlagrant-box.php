@@ -113,6 +113,17 @@ class AutoPilotConfigured extends AutoPilot {
                     "command" => 'sudo service jenkins restart',
                 ),),),
 
+                // VNC
+                array ( "Logging" => array( "log" => array( "log-message" => "Lets install VNC Server for Jenkins"),),),
+                array ( "VNC" => array("ensure" => array(),),),
+
+                // VNC
+                array ( "Logging" => array( "log" => array( "log-message" => "Lets setup VNC Server Password for Jenkins"),),),
+                array ( "VNCPasswd" => array("install" => array(
+                    "guess" => true,
+                    "vnc-user" => "jenkins"
+                ),),),
+
                 //Mysql
                 array ( "Logging" => array( "log" => array( "log-message" => "Lets ensure Mysql Server is installed" ),),),
                 array ( "MysqlServer" => array( "ensure" =>  array(
