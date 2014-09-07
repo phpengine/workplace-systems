@@ -1,0 +1,9 @@
+
+(function(window) {
+(function(){window._bizo_add_bizographics_custom_variables=function(c,a){var b,d,e;for(b in a){d=a[b];e=c[d];e!=null&&_gaq.push(["_setCustomVar",parseInt(b),d,e,1])}return _gaq.push(["_trackEvent","Tow Truck","go","-",0,true])};window._bizo_update_local_storage=function(c,a){if(a==null)a=(new Date).getTime();if(c.localStorage!=null)return c.localStorage.setItem("_bizo_last_ga_sync",a)};
+window._bizo_normalize_bizographics=function(c){var a,b,d,e,f,h,g;d={};for(a in c){b=[];if(c[a]instanceof Array){g=c[a];f=0;for(h=g.length;f<h;f++){e=g[f];e.parent_code||b.push(e.name)}}else b.push(c[a].name);b.sort();d[a]=b[0]}return d};window._bizo_ga_response_handler=function(c){var a;try{if(c.hasOwnProperty("bizographics")){a=_bizo_normalize_bizographics(c.bizographics);_bizo_add_bizographics_custom_variables(a,_bizo_custom_vars);return _bizo_update_local_storage(window)}else return console.log("did not receive any bizographic data")}catch(b){return console.log(b.message)}};
+window._bizo_make_api_call=function(c){var a,b;if(c._bizo_api_key!=null&&c._gaq!=null&&c._bizo_custom_vars!=null&&typeof c._bizo_custom_vars==="object"){b=document.getElementsByTagName("script")[0];a=document.createElement("script");a.type="text/javascript";a.async=true;a.src=(c.location.protocol==="https:"?"https://":"http://")+("api.bizographics.com/v3/profile.json?api_key="+c._bizo_api_key+"&callback=_bizo_ga_response_handler");return b.parentNode.insertBefore(a,b)}};
+window._bizo_should_call_api=function(c,a){var b;if(a==null)a=(new Date).getTime();if(c.localStorage!=null){b=c.localStorage.getItem("_bizo_last_ga_sync");if(b!=null){b=parseInt(b);b=a-b;if(b<=2592E6)return false}}return true};})();
+(function(){var error;try{window._gaq=window._gaq||[];_bizo_should_call_api(window)&&_bizo_make_api_call(window)}catch(_error){error=_error;console.log(error.message)};})();
+
+})(window);

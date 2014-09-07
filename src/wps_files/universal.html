@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<script type="text/javascript">
+<!--
+var page_name = "";
+var protocol = window.location.protocol;
+
+// Get query string following the question mark
+var qs = location.href.substring(location.href.indexOf("?")+1);
+
+// Split parameters into an array of name=value pairs, assuming pairs are separated by ampersands
+var params = qs.split("&");
+
+// looking for page_name parameter value
+for (i=0;i<params.length;i++){
+  pos = params[i].indexOf("=");
+  if (pos == -1){ continue }
+  if( params[i].substring(0,pos) == "page_name" ) {
+    page_name = (params[i].substring(pos+1)).toLowerCase();
+    break;
+  }
+}
+
+if ( page_name == "wp_confirmation" || page_name == "wp_game_page" || page_name == "wp_homepage"){
+var mt_tags_all = new Array;
+
+// MOJO assigned Site Tracking Tags Array - all tags will be served, regardless of lastvendor cookie or vendor override
+if( page_name == "wp_confirmation" ) {
+ mt_tags_all.push("<img src=\"" + protocol + "//adfarm.mediaplex.com/ad/bk/25842-186711-3840-0?Wp_Confirmation=<wp_confirmation/>&mpuid=<mpuid/>\" border=0 height=1 width=1>");
+}if( page_name == "wp_game_page" ) {
+ mt_tags_all[0] = "<scr" + "ipt type=\"text/javascript\">";
+mt_tags_all[0] += "\r\n/* <![CDATA[ */";
+mt_tags_all[0] += "\r\nvar google_conversion_id = 990304450;";
+mt_tags_all[0] += "\r\nvar google_custom_params = window.google_tag_params;";
+mt_tags_all[0] += "\r\nvar google_remarketing_only = true;";
+mt_tags_all[0] += "\r\n/* ]]> */";
+mt_tags_all[0] += "\r\n</scr" + "ipt>";
+mt_tags_all[0] += "\r\n<scr" + "ipt type=\"text/javascript\" src=\"//www.googleadservices.com/pagead/conversion.js\">";
+mt_tags_all[0] += "\r\n</scr" + "ipt>";
+mt_tags_all[0] += "\r\n<noscript>";
+mt_tags_all[0] += "\r\n<div style=\"display:inline;\">";
+mt_tags_all[0] += "\r\n<img height=\"1\" width=\"1\" style=\"border-style:none;\" alt=\"\" src=\"//googleads.g.doubleclick.net/pagead/viewthroughconversion/990304450/?value=0&amp;guid=ON&amp;script=0\"/>";
+mt_tags_all[0] += "\r\n</div>";
+mt_tags_all[0] += "\r\n</noscript>";
+mt_tags_all[1] = "<img border=\"0\" src=\"" + protocol + "//r.turn.com/r/beacon?b2=0jvSf4lVEPeSz91fVkhg9ugO9-U66g13S2QGNEERyfPn8eCeyVjUSHZ0OKySCj8WzNoIN_Pnk6e-OHdngtz2BQ&cid=\">";
+mt_tags_all[2] = "<scr" + "ipt language='JavaScript1.1' src='" + protocol + "//pixel.mathtag.com/event/js?mt_id=361248&mt_adid=116538&v1=&v2=&v3=&s1=&s2=&s3='></scr" + "ipt>";
+mt_tags_all.push("<img src=\"" + protocol + "//adfarm.mediaplex.com/ad/bk/25842-186711-3840-0?Wp_Gamepage=<wp_gamepage/>&mpuid=<mpuid/>\" border=0 height=1 width=1>");
+}if( page_name == "wp_homepage" ) {
+ mt_tags_all[0] = "<scr" + "ipt type=\"text/javascript\">";
+mt_tags_all[0] += "\r\n/* <![CDATA[ */";
+mt_tags_all[0] += "\r\nvar google_conversion_id = 990304450;";
+mt_tags_all[0] += "\r\nvar google_custom_params = window.google_tag_params;";
+mt_tags_all[0] += "\r\nvar google_remarketing_only = true;";
+mt_tags_all[0] += "\r\n/* ]]> */";
+mt_tags_all[0] += "\r\n</scr" + "ipt>";
+mt_tags_all[0] += "\r\n<scr" + "ipt type=\"text/javascript\" src=\"//www.googleadservices.com/pagead/conversion.js\">";
+mt_tags_all[0] += "\r\n</scr" + "ipt>";
+mt_tags_all[0] += "\r\n<noscript>";
+mt_tags_all[0] += "\r\n<div style=\"display:inline;\">";
+mt_tags_all[0] += "\r\n<img height=\"1\" width=\"1\" style=\"border-style:none;\" alt=\"\" src=\"//googleads.g.doubleclick.net/pagead/viewthroughconversion/990304450/?value=0&amp;guid=ON&amp;script=0\"/>";
+mt_tags_all[0] += "\r\n</div>";
+mt_tags_all[0] += "\r\n</noscript>";
+mt_tags_all[1] = "<img border=\"0\" src=\"" + protocol + "//r.turn.com/r/beacon?b2=aIwCpfvYr4bR3WWgSwpZlCyQZ1v_nUmiXWCL2iCI8lLn8eCeyVjUSHZ0OKySCj8WihqYp6T8F1d7POQsOv0RSQ&cid=\">";
+mt_tags_all[2] = "<scr" + "ipt language='JavaScript1.1' src='" + protocol + "//pixel.mathtag.com/event/js?mt_id=361249&mt_adid=116538&v1=&v2=&v3=&s1=&s2=&s3='></scr" + "ipt>";
+mt_tags_all.push("<img src=\"" + protocol + "//adfarm.mediaplex.com/ad/bk/25842-186711-3840-0?Wp_Homepage=<wp_homepage/>&mpuid=<mpuid/>\" border=0 height=1 width=1>");
+}
+
+
+
+// Combine all tracking tags into one string
+var mt_tags_str = mt_tags_all.join("\n");
+
+// Replace all parameter macros in the tracking tags string
+for (i=0;i<params.length;i++){
+  pos = params[i].indexOf("=");
+  if (pos == -1){
+    continue;
+  }
+  var name = params[i].substring(0,pos);
+  var value = params[i].substring(pos+1);
+  
+  // Create a regular expression to match all instances of the paramater macro and replace with values from the query string
+  var regex_str = "<" + name + "\\/>";
+  myregexp = new RegExp(regex_str, "gi");
+  
+  mt_tags_str = mt_tags_str.replace(myregexp, value);
+}
+
+
+}
+
+if( mt_tags_str ) {
+// Clean up any macros that may not have been replaced
+mt_tags_str = mt_tags_str.replace(/<[^<>&?=+*#@!%^~;\s'"]+\/>/gi, "");
+
+// Write out all tracking tags
+document.write(mt_tags_str);
+}
+//-->
+</script><script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 990304450;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="universal_data/conversion.js">
+</script></head><body><iframe name="google_conversion_frame" title="Google conversion frame" src="universal_data/a.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" frameborder="0" height="13" width="300">&lt;img
+ height="1" width="1" border="0" alt="" 
+src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/990304450/?frame=0&amp;random=1410117457520&amp;cv=7&amp;fst=1410117457520&amp;num=1&amp;fmt=1&amp;guid=ON&amp;u_h=768&amp;u_w=1366&amp;u_ah=744&amp;u_aw=1301&amp;u_cd=24&amp;u_his=2&amp;u_tz=60&amp;u_java=true&amp;u_nplug=7&amp;u_nmime=82&amp;frm=2&amp;url=http%3A//img-cdn.mediaplex.com/0/25842/universal.html%3Fpage_name%3Dwp_homepage%26wp_homepage%3D1%26mpuid%3D%3Fwmode%3Dtransparent&amp;ref=http%3A//www.workplacesystems.com/"
+ /&gt;</iframe>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/990304450/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<img src="universal_data/beacon.gif" border="0">
+<script language="JavaScript1.1" src="universal_data/js"></script>
+<img src="universal_data/25842-186711-3840-0.gif" border="0" height="1" width="1">
+<title></title>
+
+<p></p>
+
+  </body></html>

@@ -1,0 +1,120 @@
+/* Superfish Menu Reset */
+nav .menu, nav .menu *{margin:0; padding:0; list-style:none}
+nav>ul.menu {padding-bottom: 0px;}
+nav .menu{line-height:1.0}
+nav .menu ul{position:absolute; top:-999em; width:10em;}
+nav .menu ul li{width:100%}
+nav .menu li:hover{visibility:inherit}
+nav .menu li{float:left; position:relative}
+nav .menu a{display:block; position:relative}
+nav .menu li:hover ul, 
+nav .menu li.sfHover ul{left:0; top:69px; z-index:999}
+nav ul.menu li:hover li ul, 
+nav ul.menu li.sfHover li ul{top:-999em;}
+nav ul.menu li li:hover ul, 
+nav ul.menu li li.sfHover ul{left:10em; top:0;}
+nav ul.menu li li:hover li ul, 
+nav ul.menu li li.sfHover li ul{top:-999em}
+nav ul.menu li li li:hover ul, 
+nav ul.menu li li li.sfHover ul{left:10em; top:0;  z-index:50}
+
+/* Superfish Menu SKIN */
+nav .menu{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+nav .menu a{ 
+	display: block; 
+}
+nav .menu>li>a{
+	display: block;
+	font-weight: normal;
+	color: #111;
+	font-size: 14px;
+	line-height: 90px;
+	padding: 0 20px 0 20px;
+}
+nav .menu>li>a:hover{
+	background: #faf8f5;
+}
+nav .menu>li>a:hover, nav .menu>li.sfHover>a, li.current-menu-item>a{ 
+	text-decoration: none;
+	border-color: #EC5456 !important;
+}
+
+nav .menu li.sfHover > a{ 
+}
+nav .menu li ul li a { 
+	color: #fff;
+	padding: 0px 15px;
+	line-height: 35px; 
+	font-size: 14px;
+	margin:0px; 
+}
+nav .menu li ul li a:hover { 
+	background: #726b63;
+}
+nav ul.menu ul {
+	background: #544f4e;
+	margin-top: 20px;
+	z-index: 99;
+	padding: 0;
+}
+nav ul.menu ul ul {
+margin-top: 0;
+}
+/* point right for anchors in subs */
+nav .menu a.sf-with-ul{ min-width:1px; /*padding-right: 25px;*/ }
+nav .sf-sub-indicator{
+	position:absolute; 
+	top: 41px; 
+	right: 7px;
+	display: none;
+	width: 9px;
+	height: 9px;
+	text-indent: -9999px;
+	background: url('../img/menu-plus.png') no-repeat left top;
+}
+nav .menu ul a.sf-with-ul{ /*padding-right: 35px;*/ }
+nav .menu ul .sf-sub-indicator,
+nav .menu ul a >.sf-sub-indicator{ display:block; background: url('../img/menu-plus.png') no-repeat left bottom; width: 9px; height: 9px; top: 13px; left: 88% !important; border: 0;
+}
+}
+@media (min-width: 768px) and (max-width: 980px) {
+nav .menu>li>a{
+	font-size: 11px;
+	padding: 0 5px 0 5px;
+}
+nav .menu li ul li a { 
+	font-size: 11px;
+}
+}
+@media (max-width: 980px) {
+  nav .menu>li>a{
+	font-size: 11px;
+	line-height: 90px;
+	padding: 0 5px 0 5px;
+}
+nav .menu li ul li a { 
+	font-size: 11px;
+}
+}
+@media (min-width: 980px) {
+nav .menu>li>a{
+	font-size: 13px;
+	padding: 0 10px 0 10px;
+}
+nav .menu li ul li a { 
+	font-size: 14px;
+}	
+}
+@media (min-width: 1200px) {
+nav .menu>li>a{
+	font-size: 14px;
+	padding: 0 15px 0 15px;
+}	
+nav .menu li ul li a { 
+	font-size: 14px;
+}	
+}

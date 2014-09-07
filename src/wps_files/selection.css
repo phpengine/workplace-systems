@@ -1,0 +1,58 @@
+
+
+
+
+
+
+
+/* Options set in the admin page */
+body { color: ; font-size: ; font-weight: 400; font-stretch: normal; }
+header {  border-color: ;}
+header h1 { font-size: ; font-family: ""; }
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 { 
+		}
+
+/* Navigation */
+nav .menu>li>a:hover, nav .menu>li.sfHover>a, nav ul.menu ul { background: ;}
+nav a { font-family: "", Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif; }
+nav .menu>li>a { font-size: ; color: ;}
+nav .menu>li>a:hover, header nav .menu li.sfHover > a { color: ;}
+nav .menu li ul li a { color: ; }
+nav .menu li ul li a:hover { color: ; }
+nav .menu ul { background: ;}
+nav .menu li ul li a:hover { background: ; }
+
+/* Header Titles */
+.fullposttitle h2{ 
+			font-size: ; }
+
+/* Colors set in the Admin Panel */
+a { color: ; }
+a:hover { color: ; }
+.sidebar a { color: ; }
+.sidebar a:hover { color: ; }
+header nav a { color: ; }
+header nav a:hover { color: ; }
+
+/* Sidebar */
+.sidebar h3 { font-family:"", Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif; color: ; font-size: ;}
+
+/* Footer */
+footer {  color: ; }
+footer .widget h3 { color: ; font-family: "", Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif; }
+footer a { color: ; }
+footer a:hover { color: ; }
+
+/* Sub - Footer */
+#subfooter {  color: ;}
+#subfooter a { color: ; }
+#subfooter a:hover { color: ; }
+
+/* Feedback */
+#feedback { top: ;}
