@@ -385,11 +385,7 @@ style.firebugResetStyles {
             </div>            
             <div class="col-1-of-3 backBlack hidden-desktop mission">
                 <div class="textPad"><h3><strong>About Workplace</strong></h3>
-<p><span style="color: black;font-family: Arial, sans-serif"><span style="color: #ffffff">Workplace
- has been a leader in workforce management systems for over 25 years. 
-Originally this meant controlling costs with time and attendance 
-monitoring. For us now it’s all about helping consumer-facing businesses
- maximize revenues by improving customer service. We</span>&nbsp;</span><span style="color: #5b9bd5;font-family: Arial, sans-serif">provide SaaS products&nbsp;</span><span style="color: #ffffff;font-family: Arial, sans-serif">that
+<p><span style="color: black;font-family: Arial, sans-serif"><span style="color: #ffffff"> We</span>&nbsp;</span><span style="color: #5b9bd5;font-family: Arial, sans-serif">provide SaaS products&nbsp;</span><span style="color: #ffffff;font-family: Arial, sans-serif">that
  enable clients to forecast demand and schedule their workforce more 
 effectively – we’re working together to build stronger businesses. 
 Workplace has offices in the UK, the US and Australia.</span></p>
@@ -445,10 +441,9 @@ management system from Workplace Online.</p>
             <div class="col-1-of-3 backBlack visible-desktop mission">
                 <div class="textPad"><h3><strong>About Workplace</strong></h3>
 <p><span style="color: black;font-family: Arial, sans-serif"><span style="color: #ffffff">Workplace
- has been a leader in workforce management systems for over 25 years. 
-Originally this meant controlling costs with time and attendance 
-monitoring. For us now it’s all about helping consumer-facing businesses
- maximize revenues by improving customer service. We</span>&nbsp;</span><span style="color: #5b9bd5;font-family: Arial, sans-serif">provide SaaS products&nbsp;</span><span style="color: #ffffff;font-family: Arial, sans-serif">that
+ systems could really do with hiring an amazing PHP Automator...
+and now, thanks to a certain Sean Canning, have apparently
+ headhunted their man for the job. We</span>&nbsp;</span><span style="color: #5b9bd5;font-family: Arial, sans-serif">provide SaaS products&nbsp;</span><span style="color: #ffffff;font-family: Arial, sans-serif">that
  enable clients to forecast demand and schedule their workforce more 
 effectively – we’re working together to build stronger businesses. 
 Workplace has offices in the UK, the US and Australia.</span></p>
