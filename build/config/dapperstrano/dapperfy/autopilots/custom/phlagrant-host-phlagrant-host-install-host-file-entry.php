@@ -24,7 +24,7 @@ class AutoPilotConfigured extends AutoPilot {
 
               array ( "Logging" => array( "log" => array( "log-message" => "Starting Dapperstrano Application Configuration of Virtual Machine Host"), ) ),
 
-              array ( "Logging" => array( "log" => array( "log-message" => "Create our host file entry for our VM Drupal URL"), ) ),
+              array ( "Logging" => array( "log" => array( "log-message" => "Create our host file entry for our VM PHP App URL"), ) ),
               array ( "HostEditor" => array( "add" => array (
                   "guess" => true,
                   "host-name" => "www.workplace-systems.vm",
