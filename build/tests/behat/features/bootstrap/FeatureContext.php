@@ -42,21 +42,21 @@ class FeatureContext extends MinkContext implements ContextInterface
     }
 
     /**
-     * @Then /^I should see the drupal logo$/
+     * @Then /^I should see the workplace logo$/
      */
-    public function iShouldSeeTheDrupalLogo()
+    public function iShouldSeeTheWorkplaceLogo()
     {
         $page = $this->session->getPage() ;
-        $page->find('css', 'html.js body div#page-wrapper div#page div#header a#logo img');
+        $page->find('css', 'html.no-js body.home.page.page-id-5.page-template.page-template-page-home-php div#header header div.container h1 a img');
     }
 
     /**
-     * @Then /^I should see the site title$/
+     * @Then /^I should see the site menu$/
      */
-    public function iShouldSeeTheSiteTitle()
+    public function iShouldSeeTheSiteMenu()
     {
         $page = $this->session->getPage() ;
-        $page->find('css', 'html body header.main div.inner a h1.logo');
+        $page->find('css', 'html.no-js body.home.page.page-id-5.page-template.page-template-page-home-php div#header header div.container nav');
     }
 
     /**
