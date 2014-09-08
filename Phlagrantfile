@@ -14,7 +14,7 @@ class Phlagrantfile extends PhlagrantfileBase {
         $this->setDefaultConfig();
         // Selenium tests wont work without a GUI
         $this->config["vm"]["gui_mode"] = "gui" ;
-        $this->config["vm"]["box"] = "vanillaubuntu1204amd64" ;
+        $this->config["vm"]["box"] = "vanillaubuntu1404amd64" ;
         # Shared folder - This should map to the workstation environment vhost path parent...
         $this->config["vm"]["shared_folders"][] =
             array(

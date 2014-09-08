@@ -11,14 +11,6 @@ Selenium Configuration, Behat Configuration and Testing, PHPUnit configuration a
 and a custom PHP theme. I prepared this for you guys today as a real world example of my PHP Dev/ PHP DevOps /
 Testing Skills.
 
-In a real world situation there would be far more complex test plans, scalability, managed infrastructure, multiple types
-of automated testing, test patterns, continuous integration, multiple and prototypable environments and the like.
-
-This will soon work on any OS, as its just Phlagrant that needs some windows compatible models. I think it will work
-fine on a Mac, but haven't tried yet.
-
-
-
 # Install Instructions:
 ------------
 
@@ -52,3 +44,25 @@ a Managed, Reproducible, Infrastucture by (PHP) code Configuration.
 5) Bring the box back up with
    phlagrant up now --modify --provision
    if needed
+
+
+# Talking Stuff
+
+In a real world situation there would be far more complex test plans, scalability, managed infrastructure, multiple types
+of automated testing, test patterns, continuous integration, multiple and prototypable environments and the like.
+
+This will soon work on any OS, as its just Phlagrant that needs some windows compatible models. I think it will work
+fine on a Mac, but haven't tried yet.
+
+Notes:
+During configuration management of the vm, you'll see something like...
+[192.168.56.XXX] Executing echo phlagrant | sudo -S cleopatra auto x --af=/tmp/provision.php...
+For quite a long time. It might appear to have hung, but it (hopefully) hasn't. It reads as a command, not a stream, so
+can't update until the entire configuration management (downloading/installing selenium, behat and everything else) is
+completed. You can SSH into the box to see what it's doing. The IP is in the log and the user is phlagrant:phlagrant .
+ps aux | grep cleopatra
+strace -p*cleopatra process number*
+will let you see whats going on behind the scenes...
+
+I haven't put the "kill a build that lasts too long" plugin in, so an erroneous build will write a neverending log and
+crash the box...
