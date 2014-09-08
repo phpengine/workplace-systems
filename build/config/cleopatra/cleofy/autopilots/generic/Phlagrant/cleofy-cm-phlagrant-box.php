@@ -84,10 +84,6 @@ class AutoPilotConfigured extends AutoPilot {
                     "command" => "dapperstrano apachecontrol restart --yes --guess",
                 ) ) ),
 
-                /* Package Managers */
-                array ( "Logging" => array( "log" => array( "log-message" => "Lets ensure Pear is installed"),),),
-                array ( "Pear" => array( "ensure" => array("guess" => true ),),),
-
 
                 /* Build/CI Servers & Build Tools */
 
