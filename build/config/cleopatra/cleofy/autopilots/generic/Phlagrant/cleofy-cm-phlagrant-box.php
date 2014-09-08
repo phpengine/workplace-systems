@@ -59,6 +59,10 @@ class AutoPilotConfigured extends AutoPilot {
                 array ( "Logging" => array( "log" => array( "log-message" => "Lets ensure Git SSH Key Safe version is are installed" ),),),
                 array ( "GitKeySafe" => array( "ensure" => array(),),),
 
+                // Firefox 17
+                array ( "Logging" => array( "log" => array( "log-message" => "Lets ensure Firefox 14 is installed for selenium" ),),),
+                array ( "Firefox14" => array( "ensure" => array(),),),
+
                 /* BDD Testing */
 
                 // Selenium Server
@@ -76,6 +80,13 @@ class AutoPilotConfigured extends AutoPilot {
                 // Behat
                 array ( "Logging" => array( "log" => array( "log-message" => "Lets ensure Behat is installed"),),),
                 array ( "Behat" => array( "ensure" => array("guess" => true ),),),
+
+                // mozilla dir
+                array ( "Logging" => array( "log" => array( "log-message" => "the mozilla dir ends up being owned by root somehow, so fix" ),),),
+                array ( "RunCommand" => array( "install" => array(
+                    "guess" => true,
+                    "command" => "chown -R phlagrant /home/phlagrant/.mozilla",
+                ) ) ),
 
                 // Restart Apache for new modules
                 array ( "Logging" => array( "log" => array( "log-message" => "Lets restart Apache for our PHP and Apache Modules" ),),),
