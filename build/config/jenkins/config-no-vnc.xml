@@ -38,9 +38,5 @@ testingkamen phpunit exec --yes --guess</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
-  <buildWrappers>
-    <hudson.plugins.xvnc.Xvnc plugin="xvnc@1.14">
-      <takeScreenshot>false</takeScreenshot>
-    </hudson.plugins.xvnc.Xvnc>
-  </buildWrappers>
+  <buildWrappers/>
 </project>
