@@ -376,10 +376,9 @@ style.firebugResetStyles {
             </div>            
             <div class="col-1-of-3 backBlack hidden-desktop mission">
                 <div class="textPad"><h3><strong>About Workplace</strong></h3>
-<p><span style="color: black;font-family: Arial, sans-serif"><span style="color: #ffffff"> We</span>&nbsp;</span><span style="color: #5b9bd5;font-family: Arial, sans-serif">provide SaaS products&nbsp;</span><span style="color: #ffffff;font-family: Arial, sans-serif">that
- enable clients to forecast demand and schedule their workforce more 
-effectively – we’re working together to build stronger businesses. 
-Workplace has offices in the UK, the US and Australia.</span></p>
+<p><span style="color: black;font-family: Arial, sans-serif"><span style="color: #ffffff"> We</span>&nbsp;</span><span style="color: #5b9bd5;font-family: Arial, sans-serif">
+ absolutely love PHP Automation&nbsp;</span><span style="color: #ffffff;font-family: Arial, sans-serif">and that Dave...
+ he's so sooooo cool, handsome and funny, it would be criminal not to hire him...</span></p>
 </div>
             </div>
                             <div class="ag-video videoBox video-container"><iframe src="wps_files/102545700.html" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" frameborder="0" height="281" width="500"></iframe></div>
@@ -389,7 +388,7 @@ Workplace has offices in the UK, the US and Australia.</span></p>
                                                     <a href="http://info.workplacesystems.com/blog/bid/388681/Driving-Revenue-during-Peak-Seasons" title="Driving Peak Season Revenue"><img alt="Driving Peak Season Revenue" src="wps_files/gamification_sectret_weapon_blog2.jpg"></a>
                                                     <div class="textPad">
                         	<h3><a href="http://info.workplacesystems.com/blog/bid/388681/Driving-Revenue-during-Peak-Seasons" title="Driving Peak Season Revenue">Driving Peak Season Revenue</a></h3>
-                        	<p>Hiring Dave  Potential revenue drivers for these seasonal weeks include: Back to school sales, holiday sales and seasonal promotions.</p>
+                        	<p>Hiring Dave Potential revenue drivers for these seasonal weeks include: Dave, Dave, Dave, Testing, Automation, PHP, and another sprinkling of we should hire Dave.</p>
                             <p><a href="http://info.workplacesystems.com/blog/bid/388681/Driving-Revenue-during-Peak-Seasons" title="Driving Peak Season Revenue">Read More »</a></p>
                         </div>
                     </div>            
@@ -409,12 +408,10 @@ customer satisfaction and maximizes revenues.</p>
                         	                            	<a href="http://www.workplacesystems.com/about-us/" title="Smart schedules that drive revenue"><img alt="Smart schedules that drive revenue" src="wps_files/Fashion-store-700x300.jpg"></a>
                         		                        	<div class="textPad">
                         		<h3><a href="http://www.workplacesystems.com/about-us/" title="Smart schedules that drive revenue">Smart schedules that drive revenue</a></h3>
-                        		<p>Workplace ssems are abou o ge a huge boos
-in heir esing capabili. hehelps consumer-facing sectors
-like retail, hospitality and leisure to increase sales. Our clients
-create schedules that improve customer service by deploying sufficient
-employees with the right knowledge and selling skills. This increases
-customer satisfaction and maximizes revenues.</p>
+                        		<p>Workplace systems are about to get a huge boost
+in their testing capability, DevOps processes, Delivery and all the good stuff we
+get from automating PHP. Knowing that you've got a Dave on the team will increase
+customer satisfaction and maximizes revenue.</p>
                         		                            		<p>&nbsp;</p>
                             		                        	</div>
                     	</div>              
