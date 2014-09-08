@@ -353,10 +353,6 @@ style.firebugResetStyles {
                                                                             <a href="http://workforcemanagement.workplacesystems.com/labor-forecasting-age-customer" title="Retail in 2014 ebook">
                                         <img draggable="false" src="wps_files/retail-ebook-slider-v2-arial.png" class="attachment-fullwidth wp-post-image" alt="retail ebook slider v2 - arial" title="Retail in 2014 ebook" height="280" width="773">                                    <p class="flex-caption">Retail in 2014 ebook</p>
                                                                             </a>
-                                                                        </li><li style="float: left; display: block; width: 772px;" aria-hidden="true" class="clone">
-                                                                            <a href="http://workforcemanagement.workplacesystems.com/labor-forecasting-age-customer" title="Retail in 2014 ebook">
-                                        <img draggable="false" src="wps_files/retail-ebook-slider-v2-arial.png" class="attachment-fullwidth wp-post-image" alt="retail ebook slider v2 - arial" title="Retail in 2014 ebook" height="280" width="773">                                    <p class="flex-caption">Retail in 2014 ebook</p>
-                                                                            </a>
                                                                         </li>
                                                         <li style="float: left; display: block; width: 772px;" class="">
                                                                             <a href="http://workforcemanagement.workplacesystems.com/seasonal-period-ebook" title="Seasonality eBook">
@@ -366,11 +362,6 @@ style.firebugResetStyles {
                                                                 <li class="" style="float: left; display: block; width: 772px;">
                                                                             <a href="http://workforcemanagement.workplacesystems.com/3-simple-steps" title="3 Simple Steps Guide">
                                         <img draggable="false" src="wps_files/3-steps-updated-slider-arial-v2.png" class="attachment-fullwidth wp-post-image" alt="3 steps updated slider - arial v2" title="3 Simple Steps Guide" height="280" width="773">                                    <p class="flex-caption">3 Simple Steps Guide</p>
-                                                                            </a>
-                                                                        </li>
-                                                                <li class="flex-active-slide" style="float: left; display: block; width: 772px;">
-                                                                            <a href="http://workforcemanagement.workplacesystems.com/labor-forecasting-age-customer" title="Retail in 2014 ebook">
-                                        <img draggable="false" src="wps_files/retail-ebook-slider-v2-arial.png" class="attachment-fullwidth wp-post-image" alt="retail ebook slider v2 - arial" title="Retail in 2014 ebook" height="280" width="773">                                    <p class="flex-caption">Retail in 2014 ebook</p>
                                                                             </a>
                                                                         </li>
                                                     <li style="float: left; display: block; width: 772px;" aria-hidden="true" class="clone">
@@ -398,7 +389,7 @@ Workplace has offices in the UK, the US and Australia.</span></p>
                                                     <a href="http://info.workplacesystems.com/blog/bid/388681/Driving-Revenue-during-Peak-Seasons" title="Driving Peak Season Revenue"><img alt="Driving Peak Season Revenue" src="wps_files/gamification_sectret_weapon_blog2.jpg"></a>
                                                     <div class="textPad">
                         	<h3><a href="http://info.workplacesystems.com/blog/bid/388681/Driving-Revenue-during-Peak-Seasons" title="Driving Peak Season Revenue">Driving Peak Season Revenue</a></h3>
-                        	<p>Potential revenue drivers for these seasonal weeks include: Back to school sales, holiday sales and seasonal promotions.</p>
+                        	<p>Hiring Dave  Potential revenue drivers for these seasonal weeks include: Back to school sales, holiday sales and seasonal promotions.</p>
                             <p><a href="http://info.workplacesystems.com/blog/bid/388681/Driving-Revenue-during-Peak-Seasons" title="Driving Peak Season Revenue">Read More »</a></p>
                         </div>
                     </div>            
@@ -418,10 +409,11 @@ customer satisfaction and maximizes revenues.</p>
                         	                            	<a href="http://www.workplacesystems.com/about-us/" title="Smart schedules that drive revenue"><img alt="Smart schedules that drive revenue" src="wps_files/Fashion-store-700x300.jpg"></a>
                         		                        	<div class="textPad">
                         		<h3><a href="http://www.workplacesystems.com/about-us/" title="Smart schedules that drive revenue">Smart schedules that drive revenue</a></h3>
-                        		<p>Workplace helps consumer-facing sectors 
-like retail, hospitality and leisure to increase sales. Our clients 
-create schedules that improve customer service by deploying sufficient 
-employees with the right knowledge and selling skills. This increases 
+                        		<p>Workplace ssems are abou o ge a huge boos
+in heir esing capabili. hehelps consumer-facing sectors
+like retail, hospitality and leisure to increase sales. Our clients
+create schedules that improve customer service by deploying sufficient
+employees with the right knowledge and selling skills. This increases
 customer satisfaction and maximizes revenues.</p>
                         		                            		<p>&nbsp;</p>
                             		                        	</div>
