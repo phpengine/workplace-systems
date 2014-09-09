@@ -6,10 +6,12 @@ Hi Sean and Workplace Systems,
 
 Here we have an example of a tested, devopsy PHP application.
 
-Virtual Machine Management, Configuration Management, Automated application deployment, Infrastructure as Code,
-Selenium Configuration, Behat Configuration and Testing, PHPUnit configuration and testing, with a custom PHP Module
-and a custom PHP theme. I prepared this for you guys today as a real world example of my PHP Dev/ PHP DevOps /
-Testing Skills.
+Virtual Machine Management (Phlagrant configuration), OS Configuration Management, Automated application deployment,
+Infrastructure as Code, Jenkins build configuration, Selenium Configuration, Behat Configuration and Testing, PHPUnit
+configuration and testing, with a custom PHP site. I prepared this for you guys today as a real world example of my
+PHP Dev/ PHP DevOps / Testing Skills.
+
+
 
 # Install Instructions:
 ------------
@@ -66,3 +68,86 @@ will let you see whats going on behind the scenes...
 
 I haven't put the "kill a build that lasts too long" plugin in, so an erroneous build will write a neverending log and
 crash the box...
+
+
+# A list of most step I've automated here...
+
+
+host config mgmt
+----------------
+Ensure installation of Cleopatra
+Ensure installation of Dapperstrano
+Ensure installation of Testingkamen
+Ensure installation of Phlagrant
+Ensure installation of Virtualbox and Guest Additions
+
+
+host application deployment
+----------------
+Create our host file entry for our VM PHP App URL
+Create our host file entry for our VM Jenkins URL
+
+
+guest system mgmt
+----------------
+image file downloading
+image file extracting
+image file importing
+shared folder configuration
+virtual machine network configuration
+virtual machine memory and other hardware configuration
+
+
+guest config mgmt
+----------------
+Lets begin Configuration of a Phlagrant Box
+Ensure installation of the Phlagrant user can use Sudo without a Password
+Ensure installation of our common PHP Modules are installed
+Ensure installation of Cleopatra
+Ensure installation of Dapperstrano
+Ensure installation of Testingkamen
+Ensure installation of Apache Server is installed
+Ensure installation of our common Apache Modules are installed
+Ensure installation of our reverse proxy Apache Modules are installed
+Ensure installation of some standard tools are installed
+Ensure installation of some git tools are installed
+Ensure installation of Git SSH Key Safe version is are installed
+Ensure installation of Firefox 24 is installed for selenium
+Ensure installation of Selenium Server is installed
+Lets also start Selenium so we can use it
+Ensure installation of Behat is installed
+Lets restart Apache for our PHP and Apache Modules
+Ensure installation of Jenkins is installed
+Ensure installation of Jenkins PHP Plugins are installed
+Ensure installation of the Jenkins user can use Sudo without a Password
+Lets add global jenkins config
+Lets create our jenkins job
+Lets also restart Jenkins
+Lets install VNC Server for Jenkins
+Lets setup VNC Server Password for Jenkins
+Ensure installation of Mysql Server is installed
+Ensure installation of a Mysql Admin User is installed
+// mozilla dir fix, see end of document
+chown -R phlagrant /home/phlagrant/.mozilla",
+rm -rf /home/phlagrant/.mozilla",
+chmod -R 775 /home/phlagrant/.mozilla",
+
+
+guest application deployment
+-----------------
+Initialise Project container
+Lets initialize our new download directory as a dapper project
+Next create our host file entry for our local URL www.workplace-systems.vm so tests work
+Next create our virtual host
+Now lets restart Apache so we are serving our new application version
+Lets initialize our new download directory as a dapper project
+Next create our host file entry for our local URL www.wsys-jenkins.vm so we can access from vm if needed
+Next create our virtual host
+Now lets restart Apache so we are serving our Jenkins vhost
+
+
+--- Mozilla dir fix
+
+// @todo surely, captain, there must be a better way...
+Here's a bug... but not one of mine... due to the following firefox bug - https://bugzilla.mozilla.org/show_bug.cgi?id=198863 when the phlagrant user tries to open Firefox, the profile dir is created as root and the Firefox program (opened as phlagrant) cannot open or write to it. Anyhow, we have to start firefox as that user, let it fail, delete the root profile dir then on next opening it will work
+
