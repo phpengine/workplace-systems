@@ -162,17 +162,18 @@ class AutoPilotConfigured extends AutoPilot {
                 array ( "RunCommand" => array( "install" => array(
                     "guess" => true,
                     "run-as-user" => "phlagrant",
-                    "command" => "chown -R phlagrant /home/phlagrant/.mozilla",
+                    "command" => "firefox",
+                    "nohup" => true
                 ) ) ),
+
+//                array ( "RunCommand" => array( "install" => array(
+//                    "guess" => true,
+//                    "command" => "chmod -R 775 /home/phlagrant/.mozilla",
+//                ) ) ),
 
                 array ( "RunCommand" => array( "install" => array(
                     "guess" => true,
                     "command" => "rm -rf /home/phlagrant/.mozilla",
-                ) ) ),
-
-                array ( "RunCommand" => array( "install" => array(
-                    "guess" => true,
-                    "command" => "chmod -R 775 /home/phlagrant/.mozilla",
                 ) ) ),
 
                 array ( "Logging" => array( "log" => array(
