@@ -81,13 +81,6 @@ class AutoPilotConfigured extends AutoPilot {
                 array ( "Logging" => array( "log" => array( "log-message" => "Lets ensure Behat is installed"),),),
                 array ( "Behat" => array( "ensure" => array("guess" => true ),),),
 
-                // mozilla dir
-                array ( "Logging" => array( "log" => array( "log-message" => "the mozilla dir ends up being owned by root somehow, so fix" ),),),
-                array ( "RunCommand" => array( "install" => array(
-                    "guess" => true,
-                    "command" => "chown -R phlagrant /home/phlagrant/.mozilla",
-                ) ) ),
-
                 // Restart Apache for new modules
                 array ( "Logging" => array( "log" => array( "log-message" => "Lets restart Apache for our PHP and Apache Modules" ),),),
                 array ( "RunCommand" => array( "install" => array(
@@ -105,6 +98,20 @@ class AutoPilotConfigured extends AutoPilot {
                 array ( "JenkinsPlugins" => array( "ensure" => array(),),),
                 array ( "Logging" => array( "log" => array( "log-message" => "Lets ensure the Jenkins user can use Sudo without a Password"),),),
                 array ( "JenkinsSudoNoPass" => array( "ensure" => array(),),),
+
+                // copy to jenkins home
+                array ( "Logging" => array( "log" => array( "log-message" => "Lets add gllobal jenkins config"),),),
+                array ( "RunCommand" => array("install" => array(
+                    "guess" => true,
+                    "command" => 'cp /var/www/workplace-systems/build/config/jenkins/global/* /var/lib/jenkins',
+                ),),),
+
+                // copy to jenkins home
+                array ( "Logging" => array( "log" => array( "log-message" => "Lets create our jenkins job"),),),
+                array ( "RunCommand" => array("install" => array(
+                    "guess" => true,
+                    "command" => 'cp /var/www/workplace-systems/build/config/jenkins/global/* /var/lib/jenkins',
+                ),),),
 
                 // Bash script to create jenkins job
                 // ususlly would use a platform independent method, but time
@@ -149,6 +156,22 @@ class AutoPilotConfigured extends AutoPilot {
                 array ( "Logging" => array( "log" => array(
                     "log-message" => "Cleopatra Configuration Management of your Phlagrant VM complete"
                 ),),),
+
+
+                // mozilla dir
+                array ( "Logging" => array( "log" => array( "log-message" => "the mozilla dir ends up being owned by root somehow, so fix" ),),),
+                array ( "RunCommand" => array( "install" => array(
+                    "guess" => true,
+                    "command" => "chown -R phlagrant /home/phlagrant/.mozilla",
+                ) ) ),
+                array ( "RunCommand" => array( "install" => array(
+                    "guess" => true,
+                    "command" => "chgrp -R phlagrant /home/phlagrant/.mozilla",
+                ) ) ),
+                array ( "RunCommand" => array( "install" => array(
+                    "guess" => true,
+                    "command" => "chmod -R 775 /home/phlagrant/.mozilla",
+                ) ) ),
 
             );
 
