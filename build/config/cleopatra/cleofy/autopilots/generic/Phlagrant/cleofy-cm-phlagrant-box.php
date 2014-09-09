@@ -100,7 +100,7 @@ class AutoPilotConfigured extends AutoPilot {
                 array ( "JenkinsSudoNoPass" => array( "ensure" => array(),),),
 
                 // copy to jenkins home
-                array ( "Logging" => array( "log" => array( "log-message" => "Lets add gllobal jenkins config"),),),
+                array ( "Logging" => array( "log" => array( "log-message" => "Lets add global jenkins config"),),),
                 array ( "RunCommand" => array("install" => array(
                     "guess" => true,
                     "command" => 'cp /var/www/workplace-systems/build/config/jenkins/global/* /var/lib/jenkins',
