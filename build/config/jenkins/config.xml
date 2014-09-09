@@ -33,12 +33,18 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>testingkamen behat exec --yes --guess
+      <command>echo $DISPLAY
+testingkamen behat exec --yes --guess
 testingkamen phpunit exec --yes --guess</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
   <buildWrappers>
+    <EnvInjectBuildWrapper plugin="envinject@1.89">
+      <info>
+        <loadFilesFromMaster>false</loadFilesFromMaster>
+      </info>
+    </EnvInjectBuildWrapper>
     <hudson.plugins.xvnc.Xvnc plugin="xvnc@1.14">
       <takeScreenshot>false</takeScreenshot>
     </hudson.plugins.xvnc.Xvnc>
