@@ -34,14 +34,6 @@ class FeatureContext extends MinkContext implements ContextInterface
     }
 
     /**
-     * @Given /^I am on the home page$/
-     */
-    public function iAmOnTheHomePage()
-    {
-        $this->session->visit('http://www.workplace-systems.vm');
-    }
-
-    /**
      * @Then /^I should see the workplace logo$/
      */
     public function iShouldSeeTheWorkplaceLogo()
@@ -60,9 +52,9 @@ class FeatureContext extends MinkContext implements ContextInterface
     }
 
     /**
-     * @Then /^I should see login fields$/
+     * @Then /^I should see slider$/
      */
-    public function iShouldSeeLoginFields()
+    public function iShouldSeeSlider()
     {
         $page = $this->session->getPage() ;
         $page->find('css', 'input#edit-name');
@@ -113,7 +105,7 @@ class FeatureContext extends MinkContext implements ContextInterface
 
 
     /**
-     * @Given /^I end the session$/
+     * @Then /^I end the session$/
      */
     public function iEndTheSession()
     {
