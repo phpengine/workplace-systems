@@ -29,6 +29,12 @@ class AutoPilotConfigured extends AutoPilot {
                 array ( "Logging" => array( "log" => array( "log-message" => "Lets initialize our new download directory as a dapper project"), ) ),
                 array ( "Project" => array( "init" => array(), ) , ) ,
 
+                array ( "Logging" => array( "log" => array( "log-message" => "Next create our host file entry for our local URL"), ) ),
+                array ( "HostEditor" => array( "add" => array (
+                    "guess" => true,
+                    "host-name" => "www.workplace-systems.vm",
+                ), ), ),
+
                 array ( "Logging" => array( "log" => array( "log-message" => "Next create our virtual host"), ) ),
                 array ( "ApacheVHostEditor" => array( "add" => array (
                     "guess" => true,
@@ -51,7 +57,8 @@ class AutoPilotConfigured extends AutoPilot {
     private function getTemplate() {
         $template =
             <<<'TEMPLATE'
- NameVirtualHost ****IP ADDRESS****:80
+ NameVirtualHost 127.0.0.1:80
+ NameVirtualHost 127.0.0.1:80 ****IP ADDRESS****:80
  <VirtualHost ****IP ADDRESS****:80>
    ServerAdmin webmaster@localhost
  	ServerName ****SERVER NAME****
