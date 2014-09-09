@@ -60,8 +60,8 @@ class AutoPilotConfigured extends AutoPilot {
                 array ( "GitKeySafe" => array( "ensure" => array(),),),
 
                 // Firefox 17
-                array ( "Logging" => array( "log" => array( "log-message" => "Lets ensure Firefox 14 is installed for selenium" ),),),
-                array ( "Firefox14" => array( "ensure" => array(),),),
+                array ( "Logging" => array( "log" => array( "log-message" => "Lets ensure Firefox 24 is installed for selenium" ),),),
+                array ( "Firefox24" => array( "ensure" => array(),),),
 
                 /* BDD Testing */
 
