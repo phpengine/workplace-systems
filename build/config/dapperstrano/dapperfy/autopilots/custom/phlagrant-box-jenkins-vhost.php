@@ -63,15 +63,29 @@ class AutoPilotConfigured extends AutoPilot {
     private function getTemplate() {
         $template =
             <<<'TEMPLATE'
-           NameVirtualHost ****IP ADDRESS****:80
+ NameVirtualHost ****IP ADDRESS****:80
  <VirtualHost ****IP ADDRESS****:80>
     ServerAdmin webmaster@localhost
  	ServerName ****SERVER NAME****
     ProxyPreserveHost On
     ProxyPass / http://127.0.0.1:8080/
     ProxyPassReverse / http://127.0.0.1:8080/
-</VirtualHost>
+ </VirtualHost>
 
+ NameVirtualHost 127.0.0.1:8080
+ <VirtualHost 127.0.0.1:8080>
+    ServerAdmin webmaster@localhost
+ 	ServerName ****SERVER NAME****
+ 	DocumentRoot ****WEB ROOT****src
+ 	<Directory ****WEB ROOT****src>
+ 		Options Indexes FollowSymLinks MultiViews
+ 		AllowOverride All
+ 		Order allow,deny
+ 		allow from all
+ 	</Directory>
+   ErrorLog /var/log/apache2/error.log
+   CustomLog /var/log/apache2/access.log combined
+ </VirtualHost>
 TEMPLATE;
 
         return $template ;
