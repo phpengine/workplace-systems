@@ -90,12 +90,19 @@ Create our host file entry for our VM Jenkins URL
 
 guest system mgmt
 ----------------
+
 image file downloading
+
 image file extracting
+
 image file importing
+
 shared folder configuration
+
 virtual machine network configuration
+
 virtual machine memory and other hardware configuration
+
 
 
 guest config mgmt
