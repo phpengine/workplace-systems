@@ -127,7 +127,7 @@ Ensure installation of Dapperstrano
 
 Ensure installation of Testingkamen
 
-Ensure installation of Apache Server is installed
+Ensure installation of Apache Server 
 
 Ensure installation of our common Apache Modules are installed
 
@@ -139,17 +139,17 @@ Ensure installation of some git tools are installed
 
 Ensure installation of Git SSH Key Safe version is are installed
 
-Ensure installation of Firefox 24 is installed for selenium
+Ensure installation of Firefox 24  for selenium
 
-Ensure installation of Selenium Server is installed
+Ensure installation of Selenium Server 
 
 Lets also start Selenium so we can use it
 
-Ensure installation of Behat is installed
+Ensure installation of Behat 
 
 Lets restart Apache for our PHP and Apache Modules
 
-Ensure installation of Jenkins is installed
+Ensure installation of Jenkins 
 
 Ensure installation of Jenkins PHP Plugins are installed
 
@@ -165,9 +165,9 @@ Lets install VNC Server for Jenkins
 
 Lets setup VNC Server Password for Jenkins
 
-Ensure installation of Mysql Server is installed
+Ensure installation of Mysql Server 
 
-Ensure installation of a Mysql Admin User is installed
+Ensure installation of a Mysql Admin User 
 
 // mozilla dir fix, see end of document
 
@@ -189,7 +189,7 @@ Next create our host file entry for our local URL www.workplace-systems.vm so te
 
 Next create our virtual host
 
-Now lets restart Apache so we are serving our new application version
+Then restart Apache so we are serving our application
 
 Lets initialize our new download directory as a dapper project
 
@@ -197,7 +197,7 @@ Next create our host file entry for our local URL www.wsys-jenkins.vm so we can 
 
 Next create our virtual host
 
-Now lets restart Apache so we are serving our Jenkins vhost
+Then restart Apache so we are serving our Jenkins vhost
 
 
 --- Mozilla dir fix
