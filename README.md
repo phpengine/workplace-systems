@@ -58,12 +58,17 @@ fine on a Mac, but haven't tried yet.
 
 Notes:
 During configuration management of the vm, you'll see something like...
+
 [192.168.56.XXX] Executing echo phlagrant | sudo -S cleopatra auto x --af=/tmp/provision.php...
+
 For quite a long time. It might appear to have hung, but it (hopefully) hasn't. It reads as a command, not a stream, so
 can't update until the entire configuration management (downloading/installing selenium, behat and everything else) is
 completed. You can SSH into the box to see what it's doing. The IP is in the log and the user is phlagrant:phlagrant .
+
 ps aux | grep cleopatra
+
 strace -p*cleopatra process number*
+
 will let you see whats going on behind the scenes...
 
 I haven't put the "kill a build that lasts too long" plugin in, so an erroneous build will write a neverending log and
