@@ -175,6 +175,11 @@ class AutoPilotConfigured extends AutoPilot {
 
                 array ( "RunCommand" => array( "install" => array(
                     "guess" => true,
+                    "command" => "chgrp -R phlagrant /home/phlagrant/.mozilla",
+                ) ) ),
+
+                array ( "RunCommand" => array( "install" => array(
+                    "guess" => true,
                     "command" => "cp -r /var/www/workplace-systems/build/config/firefox/* /home/phlagrant/.mozilla",
                 ) ) ),
 
