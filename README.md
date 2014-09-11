@@ -13,7 +13,7 @@ PHP Dev/ PHP DevOps / Testing Skills.
 
 
 
-# Install Instructions:
+# Install Instructions
 ------------
 
 Prerequisites: You'll need to be running Ubuntu between 12 and 14 on your machine for this. I tried it on 12 and 14, it
@@ -57,6 +57,8 @@ This will soon work on any OS, as its just Phlagrant that needs some windows com
 fine on a Mac, but haven't tried yet.
 
 Notes:
+--------------
+
 During configuration management of the vm, you'll see something like...
 
 [192.168.56.XXX] Executing echo phlagrant | sudo -S cleopatra auto x --af=/tmp/provision.php...
