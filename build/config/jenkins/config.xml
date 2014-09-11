@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description></description>
+  <description>This is an example of a PHP build including just the tests for my Workplace Systems interview as a PHP Automation Engineer</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <org.jenkinsci.plugins.gitbucket.GitBucketProjectProperty plugin="gitbucket@0.5.1">
@@ -33,7 +33,8 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>echo $DISPLAY
+      <command>echo DISPLAY=$DISPLAY
+DISPLAY=$DISPLAY
 testingkamen behat exec --yes --guess
 testingkamen phpunit exec --yes --guess</command>
     </hudson.tasks.Shell>
