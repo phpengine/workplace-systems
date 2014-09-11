@@ -157,23 +157,25 @@ class AutoPilotConfigured extends AutoPilot {
                 ),),),
 
 
-                // mozilla dir
-                array ( "Logging" => array( "log" => array( "log-message" => "the mozilla dir ends up being owned by root somehow, so fix" ),),),
+                // @todo mozilla dir THIS BUG IS FIXED NOW
                 array ( "RunCommand" => array( "install" => array(
                     "guess" => true,
-                    "run-as-user" => "phlagrant",
-                    "command" => "firefox",
-                    "nohup" => true
+                    "command" => "mkdir /home/phlagrant/.mozilla",
                 ) ) ),
 
-//                array ( "RunCommand" => array( "install" => array(
-//                    "guess" => true,
-//                    "command" => "chmod -R 775 /home/phlagrant/.mozilla",
-//                ) ) ),
+                array ( "RunCommand" => array( "install" => array(
+                    "guess" => true,
+                    "command" => "chmod -R 775 /home/phlagrant/.mozilla",
+                ) ) ),
 
                 array ( "RunCommand" => array( "install" => array(
                     "guess" => true,
-                    "command" => "rm -rf /home/phlagrant/.mozilla",
+                    "command" => "chown -R phlagrant /home/phlagrant/.mozilla",
+                ) ) ),
+
+                array ( "RunCommand" => array( "install" => array(
+                    "guess" => true,
+                    "command" => "cp -r /var/www/workplace-systems/build/config/firefox/* /home/phlagrant/.mozilla",
                 ) ) ),
 
                 array ( "Logging" => array( "log" => array(
