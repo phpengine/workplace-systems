@@ -15,6 +15,8 @@ class Phlagrantfile extends PhlagrantfileBase {
         // Selenium tests wont work without a GUI
         $this->config["vm"]["gui_mode"] = "gui" ;
         $this->config["vm"]["box"] = "vanillaubuntu1404amd64" ;
+        $this->config["vm"]["graceful_halt_timeout"] = 10 ; # The time in seconds that Phlagrant wait for the machine to gracefully halt by soft power under phlagrant halt now. Defaults to 120 seconds.
+        $this->config["vm"]["ssh_halt_timeout"] = 10 ; #
         # Shared folder - This should map to the workstation environment vhost path parent...
         $this->config["vm"]["shared_folders"][] =
             array(
