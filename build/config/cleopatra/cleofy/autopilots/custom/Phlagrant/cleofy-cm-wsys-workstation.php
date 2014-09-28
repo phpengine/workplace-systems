@@ -16,7 +16,7 @@ class AutoPilotConfigured extends AutoPilot {
 
         $this->steps =
             array(
-                array ( "Logging" => array( "log" => array( "log-message" => "Lets install Pharaoh Tools for Capgemini"),),),
+                array ( "Logging" => array( "log" => array( "log-message" => "Lets install Pharaoh Tools for Workplace"),),),
 
                 // All Pharoes
                 array ( "Logging" => array( "log" => array( "log-message" => "Lets ensure Cleopatra" ),),),
