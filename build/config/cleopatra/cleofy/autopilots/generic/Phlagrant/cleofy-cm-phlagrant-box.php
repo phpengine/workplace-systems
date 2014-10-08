@@ -183,7 +183,7 @@ class AutoPilotConfigured extends AutoPilot {
 
                 array ( "RunCommand" => array( "install" => array(
                     "guess" => true,
-                    "command" => "cp -r /var/www/workplace-systems/build/config/firefox/* /home/phlagrant/.mozilla",
+                    "command" => "cp -r ".getcwd()."/build/config/firefox/* /home/phlagrant/.mozilla",
                 ) ) ),
 
                 array ( "Logging" => array( "log" => array(
